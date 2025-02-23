@@ -62,7 +62,3 @@ function solution(n, w, num) {
 
   return answer;
 }
-
-let a = solution(22, 6, 8);
-let b = solution(13, 3, 6);
-console.log(a, b);
