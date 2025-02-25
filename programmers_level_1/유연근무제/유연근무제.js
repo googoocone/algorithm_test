@@ -5,9 +5,9 @@ function solution(schedules, timelogs, startday) {
   for (let a = 0; a < schedules.length; a++) {
     let d = 0;
     for (let i = 0; i < 7; i++) {
-      if (i + startday == 6 || i + startday == 7 || i + startday == 13) {
-        continue;
-      }
+      let day = ((startday + i - 1) % 7) + 1;
+      if (day === 6 || day === 7) continue;
+
       let time = Math.floor(timelogs[a][i] / 100);
       let minute = timelogs[a][i] % 100;
 
